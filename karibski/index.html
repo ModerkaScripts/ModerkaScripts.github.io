@@ -2,61 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free and comfortable online Lua code editor with source code, beautiful syntax highlighting, error detection system and easy to use API." />
-    <title>karibski</title>
-    <link rel="icon" href="https://moderka.org/karibski/karibski.jpg" type="images/jpg">
-    <meta property="og:title" content="karibski" />
-    <meta property="og:site_name" content="Moderka Scripts">
-    <meta property="og:url" content="https://moderka.org/karibski/" />
-    <meta property="og:description" content="Free and comfortable online Lua code editor with source code, beautiful syntax highlighting, error detection system and easy to use API." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://moderka.org/karibski/karibski.jpg" />
-    <style>
-        body {
-            overflow: hidden;
-            background-color: #25282c
-        }
-        #editor {
-            margin: 0;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0
-        }
-    </style>
-    <script src="https://ace.ttwizz.su/ace.js"></script>
-    <script src="https://ace.ttwizz.su/ext-language_tools.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Free and comfortable online Lua code editor with source code, beautiful syntax highlighting, error detection system and easy to use API." />
+	<title>karibski</title>
+	<link rel="icon" href="https://moderka.org/karibski/karibski.jpg" type="images/jpg">
+	<meta property="og:title" content="karibski" />
+	<meta property="og:site_name" content="Moderka Scripts">
+	<meta property="og:url" content="https://moderka.org/karibski/" />
+	<meta property="og:description" content="Free and comfortable online Lua code editor with source code, beautiful syntax highlighting, error detection system and easy to use API." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://moderka.org/karibski/karibski.jpg" />
+	<style>
+	body {
+		overflow: hidden;
+		background-color: #25282c
+	}
+	
+	#editor {
+		margin: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0
+	}
+	</style>
+	<script src="https://ace.ttwizz.su/ace.js"></script>
+	<script src="https://ace.ttwizz.su/ext-language_tools.js"></script>
 </head>
 
-<body>
-    <pre id="editor"></pre>
-    <script>
-        ace.require("ace/ext/language_tools");
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/dracula");
-        editor.session.setMode("ace/mode/lua");
-        editor.setOption("enableLiveAutocompletion", true);
-        editor.setOption("cursorStyle", "smooth");
-        editor.setShowPrintMargin(false);
-        document.getElementById("editor").style.fontSize = "16px";
-        var GetText = function() {
-            return editor.getValue();
-        }
-        var SetText = function(Text) {
-            editor.setValue(Text);
-            editor.session.setValue(Text);
-        }
-        var ClearText = function() {
-            editor.setValue("");
-        }
-        var SetTheme = function(Theme) {
-            editor.setTheme("ace/theme/" + Theme);
-        }
-    </script>
+<body> <pre id="editor"></pre>
+	<script>
+	ace.require("ace/ext/language_tools");
+	var editor = ace.edit("editor");
+	editor.setTheme("ace/theme/dracula");
+	editor.session.setMode("ace/mode/lua");
+	editor.setOption("enableLiveAutocompletion", true);
+	editor.setOption("cursorStyle", "smooth");
+	editor.setShowPrintMargin(false);
+	document.getElementById("editor").style.fontSize = "16px";
+	var GetText = function() {
+		return editor.getValue();
+	}
+	var SetText = function(Text) {
+		editor.setValue(Text);
+		editor.session.setValue(Text);
+	}
+	var ClearText = function() {
+		editor.setValue("");
+	}
+	var SetTheme = function(Theme) {
+		editor.setTheme("ace/theme/" + Theme);
+	}
+	</script>
 </body>
 
 </html>
