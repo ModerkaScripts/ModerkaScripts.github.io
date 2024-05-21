@@ -1,2 +1,2 @@
-# moderka.org
+# ModerkaScripts.github.io
 Web utilities.
