@@ -3969,7 +3969,7 @@
 					staggerOrder = 'staggerOrder' in settings ? settings.staggerOrder : 'default',
 					state = 'state' in settings ? settings.state : null,
 					effect = this.effects[style];
-				if('SERENITY_DISABLE_ANIMATION' in window) {
+				if('MODERKA_DISABLE_ANIMATION' in window) {
 					if(style == 'fade-in-background') $$(selector).forEach(function(e) {
 						e.style.setProperty('--onvisible-background-color', 'rgba(0,0,0,0.001)');
 					});
