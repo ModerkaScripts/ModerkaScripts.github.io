@@ -39,8 +39,9 @@
 	var editor = ace.edit("editor");
 	editor.setTheme("ace/theme/cloud_editor_dark");
 	editor.session.setMode("ace/mode/lua");
-	editor.setOption("enableLiveAutocompletion", true);
 	editor.setOption("cursorStyle", "smooth");
+	editor.setOption("enableLiveAutocompletion", true);
+	editor.setOption("wrap", true);
 	editor.setShowPrintMargin(false);
 	document.getElementById("editor").style.fontSize = "16px";
 	var GetText = function() {
